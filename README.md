@@ -57,7 +57,17 @@ Caso queira testar a api, inicie o servidor:
 
 Depois importe a collection do Postman localizada em:
 postman/api.postman_collection.json
-e realize os testes.
+
+As rotas da API estão protegidas pelo Laravel Sanctum, portanto é necessário autenticar antes de utilizá-las.
+
+Faça uma requisição post para api/register usando o mesmo padrão do body ja existente (name,email,password)
+
+A resposta incluirá um token que será utilizado para autenticar as próximas chamadas.
+
+Em todas as requisições , adicione no header:
+
+- Authorization: Bearer SEU_TOKEN_AQUI
+- Accept: application/json
 
 ---
 

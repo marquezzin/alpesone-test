@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "0bc9f2cb-fb69-4b23-9329-ce688506a262",
 		"name": "AlpesOne",
-		"description": "Nas rotas que exigem body como post e update, teste com o mesmo padrão do body já presente, pois é o padrão que é salvo no banco de dados, o que muda do padrão da url é:  \n  \nyear_model e year_build no lugar de year como objeto contendo model e build\n\ne a troca da label de fotos para photos ( para seguir mesmo padrão do banco de dados)",
+		"description": "Nas rotas que exigem body como post e update, teste com o mesmo padrão do body já presente, pois é o padrão que é salvo no banco de dados, o que muda do padrão da url é:\n\nyear_model e year_build no lugar de year como objeto contendo model e build\n\ne a troca da label de fotos para photos ( para seguir mesmo padrão do banco de dados)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39720136"
 	},
@@ -11,7 +11,66 @@
 			"name": "index",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8000/api/cars",
 					"protocol": "http",
@@ -31,9 +90,68 @@
 			"name": "show",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:8000/api/cars/99",
+					"raw": "http://localhost:8000/api/cars/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -42,7 +160,7 @@
 					"path": [
 						"api",
 						"cars",
-						"99"
+						"3"
 					]
 				}
 			},
@@ -52,7 +170,78 @@
 			"name": "create",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"carro\",\r\n    \"brand\": \"Marquecarro\",\r\n    \"model\": \"Marquecarro\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a90/67c0b5a9067ff421616405.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/94e/67c0b594eb2dc220649342.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/9c8/67c0b59c8c808439605857.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a97/67c0b5a97c86e099489967.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91908036396810.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/929/67c0b5929c885797708560.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/991/67c0b5991a933007662702.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a2c/67c0b5a2cf5cf376755625.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/b08/67c0b5b088ac4879146658.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/b00/67c0b5b00423f765518077.jpeg\"\r\n    ]\r\n  }",
@@ -82,7 +271,179 @@
 			"name": "update",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"moto\",\r\n    \"brand\": \"Marquemoto\",\r\n    \"model\": \"Marquemoto\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cars/39",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						"39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"moto\",\r\n    \"brand\": \"Marquemoto\",\r\n    \"model\": \"Marquemoto\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\"\r\n    ]\r\n  }",
@@ -109,13 +470,79 @@
 			"response": []
 		},
 		{
-			"name": "delete",
+			"name": "Login",
 			"request": {
-				"method": "DELETE",
-				"header": [],
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"moto\",\r\n    \"brand\": \"Marquemoto\",\r\n    \"model\": \"Marquemoto\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\"\r\n    ]\r\n  }",
+					"raw": "{\r\n  \"email\": \"gabriel@mail.com\",\r\n  \"password\": \"123456\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -123,7 +550,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/cars/40",
+					"raw": "http://localhost:8000/api/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -131,8 +558,192 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"cars",
-						"40"
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Gabriel Rocha\",\r\n  \"email\": \"gabriel@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6InF2Zk95dTJxR04wS2RXS1BEMnBjMnc9PSIsInZhbHVlIjoic21GODFXVVBBeC9FV3lrVms4SG9jMVdlMk1uWjlHRWZ1TFlIMUVYb2xvSVJSRWY4dkk2T1crQW1SRFVNOVh2a21BRmRGR2c2bnhUT3VPemZOUkwvTEEwcE9OdEFGRVdTTXl0VHlnSTBIY1liSTVXTG8yZWE5Mm82azJ4TE8ybnkiLCJtYWMiOiJhNGRmZjNiOGYxODkwYTUxYjYyMjE5NGNjMzdlOTFkMzQ3YjZhOWM5NzM3YWU5NzZiNDQ2NDgxMTJlMjk4ZjRjIiwidGFnIjoiIn0%3D; laravel-session=eyJpdiI6IkFKd1I3OTJKYVlwNHV1cENBZU1aQkE9PSIsInZhbHVlIjoiWGFtSjBzbVlweFR5Q2xCSHlqTThsMG44VmhEVEZ1TFhxNEI4WjFJTzA2Z0ozTlNua1N1WjJBV1FGV0VQQVAvT2YzNjlXZjRrSXE5a3hKeWRUdmVOM0FscEtBckY3THczWkdFVHoxZW4velFrb1VTZ1lPbGFkVlE5MDVPSUl3YVoiLCJtYWMiOiIxMTMwNzJlNGQ2NGRhZmEzYTc1NjJkZDZiMGZmMWMyZDk1ZjNhOTZkMTIwMTYyMGJjODIxNjkzYWQxMDhiMmMzIiwidGFnIjoiIn0%3D",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|lxHszNx8lSh3GbV8GgK9Jp8IPUHKlL2ydhcN3DOG79f24c94",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Gabriel Rocha\",\r\n  \"email\": \"gabriel@email.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
 					]
 				}
 			},
