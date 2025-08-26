@@ -12,9 +12,20 @@ class CarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Car::with('photos')->get();
+        // per_page com fallback e limites
+        $perPage = (int) $request->query('per_page', 15);
+        if ($perPage <= 0) {
+            $perPage = 15;
+        }
+        $perPage = min($perPage, 100); // evita per_page absurdos
+
+        $cars = Car::with('photos')
+            ->orderByDesc('id')
+            ->paginate($perPage);
+
+        return response()->json($cars);
     }
 
     /**
