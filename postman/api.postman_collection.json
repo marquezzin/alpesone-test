@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "0bc9f2cb-fb69-4b23-9329-ce688506a262",
+		"name": "AlpesOne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39720136"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/cars/99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"carro\",\r\n    \"brand\": \"Marquecarro\",\r\n    \"model\": \"Marquecarro\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a90/67c0b5a9067ff421616405.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/94e/67c0b594eb2dc220649342.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/9c8/67c0b59c8c808439605857.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a97/67c0b5a97c86e099489967.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91908036396810.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/929/67c0b5929c885797708560.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/991/67c0b5991a933007662702.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/a2c/67c0b5a2cf5cf376755625.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/b08/67c0b5b088ac4879146658.jpeg\",\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/b00/67c0b5b00423f765518077.jpeg\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"moto\",\r\n    \"brand\": \"Marquemoto\",\r\n    \"model\": \"Marquemoto\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cars/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 99999,\r\n    \"type\": \"moto\",\r\n    \"brand\": \"Marquemoto\",\r\n    \"model\": \"Marquemoto\",\r\n    \"version\": \"CRETA 16A ACTION\",\r\n    \"year_model\": \"2025\",\r\n    \"year_build\": \"2025\",\r\n    \"optionals\": [],\r\n    \"doors\": \"5\",\r\n    \"board\": \"JCU2I93\",\r\n    \"chassi\": \"\",\r\n    \"transmission\": \"Automática\",\r\n    \"km\": \"24208\",\r\n    \"description\": \"*revisado\\r\\n*procedência\\r\\n*garantia \\r\\n\\r\\nPegamos trocas mediante avaliação\\r\\nvalor do anuncio para vendas avista !\\r\\npara trocas consultar condições\\r\\n\\r\\ncontato\\r\\nconsultor de vendas (watts zapp)\\r\\n\\r\\nFelipe  48- 99931-6648 /  Araranguá - SC \\r\\n\\r\\nJefersson  48- 8427-9763 / Criciuma - SC\\r\\n\\r\\nLucas - 48-48 9177-1511 /  Tubarão - SC\",\r\n    \"created\": \"2025-02-27 15:53:57\",\r\n    \"updated\": \"2025-06-16 16:27:36\",\r\n    \"sold\": \"0\",\r\n    \"category\": \"SUV\",\r\n    \"url_car\": \"hyundai-creta-2025-automatica-99999\",\r\n    \"old_price\": null,\r\n    \"price\": \"115900.00\",\r\n    \"color\": \"Branco\",\r\n    \"fuel\": \"Gasolina\",\r\n    \"photos\": [\r\n      \"https://alpes-hub.s3.amazonaws.com/uploads/public/67c/0b5/8c9/67c0b58c91b8f637846682.jpeg\"\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cars/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cars",
+						"40"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
