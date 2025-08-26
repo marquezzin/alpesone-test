@@ -26,11 +26,11 @@
 Siga as etapas abaixo para configurar e rodar a aplicação corretamente:
 
 ### 1️⃣ Clonar e instalar dependências
-git clone https://github.com/marquezzin/alpesone-test.git
-cd https://github.com/marquezzin/alpesone-test.git
-npm install
-composer install
-php artisan key:generate
+- git clone https://github.com/marquezzin/alpesone-test.git
+- cd https://github.com/marquezzin/alpesone-test.git
+- npm install
+- composer install
+- php artisan key:generate
 
 ### 2️⃣ Configuração do `.env`
 Crie um arquivo `.env` a partir do `.env.example` e configure as variáveis:
@@ -40,16 +40,16 @@ Crie um arquivo `.env` a partir do `.env.example` e configure as variáveis:
 ALPESONE_EXPORT_URL="https://hub.alpes.one/api/v1/integrator/export/1902"
 
 ### 3️⃣ Rodar as migrações
-php artisan migrate
+- php artisan migrate:
 Isso irá criar a estrutura do banco de dados no seu ambiente local.
 
 ### 4️⃣ Importar dados da API
 Execute o comando para buscar o JSON da URL e inserir/atualizar os registros no banco:
-php artisan alpesone:fetch
+- php artisan alpesone:fetch
 
 ### 5️⃣ Testar a API
 Antes de testar, inicie o servidor:
-composer run dev
+- composer run dev
 
 Depois importe a collection do Postman localizada em:
 postman/api.postman_collection.json
