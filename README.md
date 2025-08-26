@@ -40,15 +40,19 @@ Crie um arquivo `.env` a partir do `.env.example` e configure as variáveis:
 ALPESONE_EXPORT_URL="https://hub.alpes.one/api/v1/integrator/export/1902"
 
 ### 3️⃣ Rodar as migrações
-- php artisan migrate:
-Isso irá criar a estrutura do banco de dados no seu ambiente local.
+Isso irá criar a estrutura do banco de dados no seu ambiente local
+- php artisan migrate
+
 
 ### 4️⃣ Importar dados da API
 Execute o comando para buscar o JSON da URL e inserir/atualizar os registros no banco:
 - php artisan alpesone:fetch
 
-### 5️⃣ Testar a API
-Antes de testar, inicie o servidor:
+### 5️⃣ Testes
+Rodar testes locais com:
+- php artisan test
+
+Caso queira testar a api, inicie o servidor:
 - composer run dev
 
 Depois importe a collection do Postman localizada em:
