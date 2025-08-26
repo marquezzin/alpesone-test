@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "0bc9f2cb-fb69-4b23-9329-ce688506a262",
 		"name": "AlpesOne",
+		"description": "Nas rotas que exigem body como post e update, teste com o mesmo padrão do body já presente, pois é o padrão que é salvo no banco de dados, o que muda do padrão da url é:  \n  \nyear_model e year_build no lugar de year como objeto contendo model e build\n\ne a troca da label de fotos para photos ( para seguir mesmo padrão do banco de dados)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39720136"
 	},
@@ -108,9 +109,9 @@
 			"response": []
 		},
 		{
-			"name": "update Copy",
+			"name": "delete",
 			"request": {
-				"method": "PUT",
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
