@@ -21,7 +21,7 @@
 
 ---
 
-# 🚀 Configuração de Ambiente
+# 🚀 Configuração de Ambiente Local
 
 Siga as etapas abaixo para configurar e rodar a aplicação corretamente:
 
@@ -70,4 +70,19 @@ Em todas as requisições , adicione no header:
 - Accept: application/json
 
 ---
+# 🚀 Configuração da instância EC2
+Passos para configuração:
 
+- Configurar a instância EC2 no console da aws
+- Conexão via SSH
+- Instalar pacotes com sudo apt install (git,nginx,mysql-server e curl)
+- Baixar os server requirements de acordo com a versão do laravel, nesse caso o 12
+- Instalar nvm e node
+- Habilitar serviços (mysql,nginx,php)
+- MySql Secure Installation
+- Instalação do composer
+- Clonar o projeto na pasta '/var/www' após alterar as permissões da mesma
+- Configura dependências do projeto (.env, key, migrations, composer i, npm i...)
+- Configuração do nginx
+
+Por fim a aplicação fica disponível no ip público da instância
