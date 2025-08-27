@@ -27,7 +27,7 @@ Siga as etapas abaixo para configurar e rodar a aplicação corretamente:
 
 ### 1️⃣ Clonar e instalar dependências
 - git clone https://github.com/marquezzin/alpesone-test.git
-- cd https://github.com/marquezzin/alpesone-test.git
+- cd alpesone-test
 - npm install
 - composer install
 - php artisan key:generate
