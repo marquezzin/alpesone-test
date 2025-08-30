@@ -28,7 +28,7 @@ class CarFactory extends Factory
             'updated'      => now(),
             'sold'         => $this->faker->boolean(),
             'category'     => $this->faker->randomElement(['Novo', 'Usado', 'Seminovo']),
-            'url_car'      => $this->faker->url(),
+            'url_car'      => $this->faker->unique()->url(),
             'price'        => $this->faker->randomFloat(2, 20000, 250000),
             'old_price'    => $this->faker->randomFloat(2, 20000, 250000),
             'color'        => $this->faker->safeColorName(),
