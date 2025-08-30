@@ -52,8 +52,9 @@ Execute o comando para buscar o JSON da URL e inserir/atualizar os registros no 
 Rodar testes locais com:
 - php artisan test
 
-Caso queira testar a api, inicie o servidor:
-- composer run dev
+Caso queira testar a api, inicie o servidor, rode os comandos abaixo em portas diferentes:
+- npm run dev
+- php artisan serve
 
 Depois importe a collection do Postman localizada em:
 postman/api.postman_collection.json
